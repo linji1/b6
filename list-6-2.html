@@ -1077,4 +1077,100 @@ jQuery(document).ready(function($){
 </script></div>
 
 </body>
+</html>coration:none;">老林导航</div></a>
+</div>
+</div>
+<!--手机端底部导航结束-->
+<!-- 给博客顶部加一个浏览进度条，表示浏览当面页面的进度 -->
+<script language="javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+      var winHeight = window.innerHeight,
+            docHeight = document.documentElement.scrollHeight,
+            progressBar = document.querySelector('#content_progress');
+      progressBar.max = docHeight - winHeight;
+      progressBar.value = window.scrollY;
+
+      document.addEventListener('scroll', function () {
+            progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.value = window.scrollY;
+            // 显示进度条
+            if (window.scrollY > 0) {
+                progressBar.style.display = 'block';
+            } else {
+                progressBar.style.display = 'none';
+            }
+      });
+});
+</script>
+
+<progress id="content_progress" value="0" style="display: none;"></progress>
+<!-- 给博客顶部加一个浏览进度条，表示浏览当面页面的进度 -->
+<script src='/live2d/autoload.js'></script><!--  统计鸟  -->
+<script type="text/javascript" src="//api.tongjiniao.com/c?_=613193407680258048" async></script>
+<!--  统计鸟  -->
+
+<!--  回顶部  -->
+<style type="text/css">
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 152px;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    background: #fff url(/assets/qblog/images/up.svg) no-repeat center center;
+    background-size: 20px 20px;
+    border: 1px solid #666;
+    opacity: .8;
+    text-indent: -99999px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.scroll-to-top:hover {
+  opacity: .8;
+}
+
+.fancybox__backdrop {
+opacity: 1;
+}
+</style>
+
+<script type="text/javascript" charset="utf-8">   
+jQuery(document).ready(function($){
+	if ($(window).scrollTop() != "0")
+		$(".scroll-to-top").fadeIn(1200) //如果距离顶部的距离不为20，显示.scroll-to-top
+	var scrollDiv = $(".scroll-to-top");
+	$(window).scroll(function()
+	{
+		if ($(window).scrollTop() == "0")
+			$(scrollDiv).fadeOut(350)//如果距离顶部的距离为20，隐藏scrollDiv
+		else
+			$(scrollDiv).fadeIn(1200)//其他情况下，显示scrollDiv
+	});
+	$(".scroll-to-top").click(function(){
+		$("html, body").animate({
+			scrollTop: 0 //点击按钮，滚动回到顶部
+		}, 600)
+	})
+
+});  
+</script>
+
+<div class="scroll-to-top" style="display: none;"><i class="fa fa-chevron-up"></i></div>
+<!-- 返回顶部 -->
+
+<script>
+    // 当文档内容完全加载后执行指定函数
+    document.addEventListener("DOMContentLoaded", function() {
+        // 获取页面上所有的img元素
+        const images = document.querySelectorAll('img');
+        // 遍历所有img元素，为它们设置lazy加载属性
+        images.forEach(img => {
+            img.setAttribute('loading', 'lazy');
+        });
+    });
+</script></div>
+
+</body>
 </html>
