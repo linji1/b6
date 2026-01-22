@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=。温馨提示各小学教师个人所得税七项专项附加扣除和扣缴申报每年一次，2025年的申报现在可以操作了，请提醒教师于2024年12月30日前完成个人所得税七项专项附加扣除操作。操作方法如下一，2024年已申报个税扣除，2025年继续享受的，请打开手机个人所得税APP，登录入后，点击专项附加扣除的去确认或填报按键，进入下一界面后点击一键带入，再点击确定，如果右边出现绿色可确认，表示该项2025年可以继续享受，如果要更新就点击该项进入修改，没错就不改，然后点击手机屏右上角的一键确认，再点击确认如果出现红色待修改，表示时间等信息2025年不能再继续享受专项附加扣除，必须点击待修改进入该项再点击修改，更改扣">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=。温馨提示各小学教师个人所得税七项专项附加扣除和扣缴申报每年一次，2025年的申报现在可以操作了，请提醒教师于2024年12月30日前完成个人所得税七项专项附加扣除操作。操作方法如下一，2024年已申报个税扣除，2025年继续享受的，请打开手机个人所得税APP，登录入后，点击专项附加扣除的去确认或填报按键，进入下一界面后点击一键带入，再点击确定，如果右边出现绿色可确认，表示该项2025年可以继续享受，如果要更新就点击该项进入修改，没错就不改，然后点击手机屏右上角的一键确认，再点击确认如果出现红色待修改，表示时间等信息2025年不能再继续享受专项附加扣除，必须点击待修改进入该项再点击修改，更改扣','https://dict.youdao.com/dictvoice?le=zh&audio=除比例，教育信息，分摊方式，赡养人信息等内容，使其符合享受条件，这样才出现绿色可确认，然后点击手机屏右上角的一键确认，再点击确认。二，确认后如果还要修改，可以查看手机屏一键带入文字下面的填报记录，进入该项并点击修改，修改正确后再点击确认修改。三，如果是重新注册，重新录入信息，可以进入手机个人所得税APP并点击申报专项附加扣除填报，选择子女教育或其它项点击进入，选2025年，然后按提示填报。特别强调填报某项附加扣除信息时，在最后一步的选择申报方式，选第一点通过扣缴义务人申报，再选择雷州市杨家镇中心小学，不要选雷州市财政局。不懂得操作的请其他教师帮忙注册并填报。四，为了减少缴纳个人所得税，如果确实','https://dict.youdao.com/dictvoice?le=zh&audio=有符合七项专项附加扣除的，请各教师尽快在手机个人所得税APP中操作申报。杨家镇中心小学教育指导组2024年12月18日上午 gallery1 margin autogallery1 galleryitem float leftmargintop 10pxtextalign centerwidth 50gallery1 img border 2px solid cfcfcfgallery1 gallerycaption marginleft 0',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -687,11 +655,7 @@ document.body.addEventListener('input', POWERMODE);
 	margin-left: 0;
 }
 </style></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2024-12-18 10:39:54 通过 手机 <i class="iconfont icon-view"></i> 浏览(1405) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2024-12-18 10:39:54 通过 手机 <i class="iconfont icon-view"></i> 浏览(1570) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

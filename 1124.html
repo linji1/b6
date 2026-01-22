@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=。雷州市教育局复课通知雷州市气象台于6月15日08时解除雷州市台风预警信号，现决定全市中小学，幼儿园，校外培训机构于6月16日星期一全面复课，恢复正常教学秩序。请各学校做好复课准备，及时通知学生按时返校上课，并提醒学生注意上学路上安全。雷州市教育局停课通知受台风蝴蝶热带风暴级影响，我市气象台于6月12日17时13分发出台风黄色预警信号。根据广东省气象灾害预警信号发布规定，6月13日星期五起全市各中小学，幼儿园，校外培训机构停课，请各中小学，幼儿园，校外培训机构妥善安排学生安全离校回家，做好各方面防御工作，同时密切关注台风最新消息和复课通知。防风通知6月11日15时，台风蝴蝶热带风暴级位于雷州东">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=。雷州市教育局复课通知雷州市气象台于6月15日08时解除雷州市台风预警信号，现决定全市中小学，幼儿园，校外培训机构于6月16日星期一全面复课，恢复正常教学秩序。请各学校做好复课准备，及时通知学生按时返校上课，并提醒学生注意上学路上安全。雷州市教育局停课通知受台风蝴蝶热带风暴级影响，我市气象台于6月12日17时13分发出台风黄色预警信号。根据广东省气象灾害预警信号发布规定，6月13日星期五起全市各中小学，幼儿园，校外培训机构停课，请各中小学，幼儿园，校外培训机构妥善安排学生安全离校回家，做好各方面防御工作，同时密切关注台风最新消息和复课通知。防风通知6月11日15时，台风蝴蝶热带风暴级位于雷州东','https://dict.youdao.com/dictvoice?le=zh&audio=南方约510公里的海面上，预计24小时内将受其影响，风力可达6级以上，从6月11日16时06分起，雷州市台风蓝色预警信号生效。各学校要高度重视，严格落实各项防御措施，确保师生生命安全。一要加强组织领导落实主体责任。各学校要克服麻痹思想和侥幸心理，严格落实值班制度，强化值守巡查。二要加强预警通知。通过短信，微信等方式，及时向师生发送预警信息，引导出行和出游的师生提前调整计划。三是加强隐患排查和风险管控。对学校区域内的各种风险隐患点和可能发生次生灾害的地点进行排查，及时消除安全隐患。湛江市区台风蓝色预警11日15时，台风蝴蝶热带风暴级位于湛江市区东南方约540公里的海面上，预计24小时内将受其影响','https://dict.youdao.com/dictvoice?le=zh&audio=，风力可达6级以上，从6月11日16时起，湛江市区台风蓝色预警信号生效。湛江市气象台发布防御指引1进入台风戒备状态，做好防御台风准备。2注意了解台风最新消息和政府及有关部门防御台风通知。3加固门窗和板房，铁皮屋，棚架等临时搭建物，妥善安置室外搁置物和悬挂物。4海水养殖，海上作业人员应当适时撤离，船舶应当及时回港避风或者采取其他避风措施。工作提醒请各学校提前做好台风防御工作，排查校园内的广告牌，楼顶设施，特别是支撑柱比较小的车棚雨棚等，该加固的加固，台风期间，人员不得靠近，确保师生人身安全雷州市教育局政安股nbsp2025611',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -634,11 +602,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p>【雷州市教育局】【复课通知】雷州市气象台于6月15日08时解除雷州市台风预警信号，现决定全市中小学、幼儿园、校外培训机构于6月16日（星期一）全面复课，恢复正常教学秩序。请各学校做好复课准备，及时通知学生按时返校上课，并提醒学生注意上学路上安全。</p><p>【雷州市教育局】【停课通知】受台风“蝴蝶”（热带风暴级）影响，我市气象台于6月12日17时13分发出台风黄色预警信号。根据《广东省气象灾害预警信号发布规定》，6月13日（星期五）起全市各中小学、幼儿园、校外培训机构停课，请各中小学、幼儿园、校外培训机构妥善安排学生安全离校回家，做好各方面防御工作，同时密切关注台风最新消息和复课通知。</p><p>【防风通知】6月11日15时，台风“蝴蝶”（热带风暴级）位于雷州东南方约510公里的海面上，预计24小时内将受其影响，风力可达6级以上，从6月11日16时06分起，雷州市台风蓝色预警信号生效。各学校要高度重视，严格落实各项防御措施，确保师生生命安全。一要加强组织领导落实主体责任。各学校要克服麻痹思想和侥幸心理，严格落实值班制度，强化值守巡查。二要加强预警通知。通过短信、微信等方式，及时向师生发送预警信息，引导出行和出游的师生提前调整计划。三是加强隐患排查和风险管控。对学校区域内的各种风险隐患点和可能发生次生灾害的地点进行排查，及时消除安全隐患。</p><p>【湛江市区台风蓝色预警】11日15时，台风“蝴蝶”（热带风暴级）位于湛江市区东南方约540公里的海面上，预计24小时内将受其影响，风力可达6级以上，从6月11日16时起，湛江市区台风蓝色预警信号生效。湛江市气象台发布</p><p>防御指引：</p><p>1.进入台风戒备状态，做好防御台风准备。</p><p>2.注意了解台风最新消息和政府及有关部门防御台风通知。</p><p>3.加固门窗和板房、铁皮屋、棚架等临时搭建物，妥善安置室外搁置物和悬挂物。</p><p>4.海水养殖、海上作业人员应当适时撤离，船舶应当及时回港避风或者采取其他避风措施。</p><p>【工作提醒】请各学校提前做好台风防御工作，排查校园内的广告牌、楼顶设施，特别是支撑柱比较小的车棚雨棚等，该加固的加固，台风期间，人员不得靠近，确保师生人身安全！ 【雷州市教育局政安股&nbsp;2025.6.11】</p></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2025-06-11 21:31:20 通过 手机 <i class="iconfont icon-view"></i> 浏览(870) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2025-06-11 21:31:20 通过 手机 <i class="iconfont icon-view"></i> 浏览(1008) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

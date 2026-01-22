@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=。通知各小学，幼儿园根据教育局通知，2023年中小学教师资格定期注册现定于10月25日开始，报名时间2024年10月25日900至11月4日1700现场确认时间2024年11月5日至11月18日工作日。请符合定期或首次注册的教师于规定时间内进行网上报名。教师资格注册关系到教师个人的职称评审，请一定重视，逾期后果自负。杨家镇中心小学教育指导组2024年10月23日下午定期注册现场确认须提交如下材料1教师资格定期注册申请表一式2份2教师资格证书原件及复印件3与教育行政部门或任教学校签订的有效聘用合同民办学校才需要4省级教育行政部门认可的继续教育证书20192023年度。有两种及以上教师资格证书的，">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=。通知各小学，幼儿园根据教育局通知，2023年中小学教师资格定期注册现定于10月25日开始，报名时间2024年10月25日900至11月4日1700现场确认时间2024年11月5日至11月18日工作日。请符合定期或首次注册的教师于规定时间内进行网上报名。教师资格注册关系到教师个人的职称评审，请一定重视，逾期后果自负。杨家镇中心小学教育指导组2024年10月23日下午定期注册现场确认须提交如下材料1教师资格定期注册申请表一式2份2教师资格证书原件及复印件3与教育行政部门或任教学校签订的有效聘用合同民办学校才需要4省级教育行政部门认可的继续教育证书20192023年度。有两种及以上教师资格证书的，','https://dict.youdao.com/dictvoice?le=zh&audio=按与现任教学段和学科一致的教师资格证书进行注册。若符合今年合格条件，就申请注册，如果还是暂缓，不用申请注册。申请表单位负责人由校长签名，农村小学由本校校长签名并盖章。五年一周期，有效期到期，必须申请注册，符合合格的，结论合格，进入下一个五年周期。符合暂缓的，结论暂缓，第二年还不是合格的，不用申请，若第二年合格就申请注册。若一直暂缓，五年到期一样要申请注册。也就是暂缓不能一直暂缓下去，五年到期一样要申请注册，尽管结论是暂缓，一样要申请。举例，某老师教师资格证有效期至2022年12月31日，那2022年10月必须申请注册，如果合格，贴合格标志，有效期到2027年，到2027年再申请注册。若暂缓例如','https://dict.youdao.com/dictvoice?le=zh&audio=缺2017到2021某一年继续教育证书，贴暂缓标志。到2023年，若合格了，2023年要申请注册，贴合格标志，若还是暂缓例如缺2018到2022某一年继续教育证书，2023年不用申请注册。到2024年，若合格了就申请注册，若暂缓就不用申请。若一直暂缓，到2027年必须再次申请注册。',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -652,11 +620,7 @@ document.body.addEventListener('input', POWERMODE);
 <p>若暂缓（例如缺2017到2021某一年继续教育证书），贴暂缓标志。到2023年，若合格了，2023年要申请注册，贴合格标志，若还是暂缓（例如缺2018到2022某一年继续教育证书），2023年不用申请注册。</p>
 
 <p>到2024年，若合格了就申请注册，若暂缓就不用申请。若一直暂缓，到2027年必须再次申请注册。</p></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2024-10-23 20:59:33 通过 网页 <i class="iconfont icon-view"></i> 浏览(1224) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2024-10-23 20:59:33 通过 网页 <i class="iconfont icon-view"></i> 浏览(1364) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

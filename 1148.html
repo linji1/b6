@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=202501034操作六年级毕业。全国中小学生学籍信息管理系统通知各小学1，关于学籍20版本试点工作。学籍系统将于今天2025年7月15日起开始试点运行，现将教育部下发的操作指南PPT转发在微信群上面，请各校认真学习，严格按照要求规范操作。2，请各校通知学籍管理员这几天进入学籍管理系统，处理学籍中待办业务，然后进行六年级毕业升级操作。毕业升级操作最迟于7月26日前完成。现把杨家镇小学生全国学籍登录账号，密码和学籍管理系统六年级毕业升级操作流程发在微信通知群上面，请按要求完成操作。特别强调没有六年级毕业班的学校也要进入学籍系统，如果有学生未及时转出而学籍在六年级的，也要进行毕业操作。杨家镇中心小">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=202501034操作六年级毕业。全国中小学生学籍信息管理系统通知各小学1，关于学籍20版本试点工作。学籍系统将于今天2025年7月15日起开始试点运行，现将教育部下发的操作指南PPT转发在微信群上面，请各校认真学习，严格按照要求规范操作。2，请各校通知学籍管理员这几天进入学籍管理系统，处理学籍中待办业务，然后进行六年级毕业升级操作。毕业升级操作最迟于7月26日前完成。现把杨家镇小学生全国学籍登录账号，密码和学籍管理系统六年级毕业升级操作流程发在微信通知群上面，请按要求完成操作。特别强调没有六年级毕业班的学校也要进入学籍系统，如果有学生未及时转出而学籍在六年级的，也要进行毕业操作。杨家镇中心小','https://dict.youdao.com/dictvoice?le=zh&audio=学教育指导组2025年7月15日上午学籍管理系统六年级毕业升级操作流程nbspnbsp一，审核学籍系统中存在的待办业务进入学籍系统后，查看首页，如果待办业务栏存在待办业务，先点击查看，已符合办理条件，并且上传佐证材料也齐全的，就给予审核，点击审核通过。一定要处理完毕相关待办业务，以便8月初进行学籍升级。nbsp二，六年级毕业升级操作在全国中小学生学籍信息管理系统中进行六年级毕业操作，各校学籍管理员可以进入学籍系统后，发现有六年级毕业生的，必须在7月26日前完成六年级毕业操作。操作步骤如下进入学籍管理系统后点击窗口右上角的学籍管理，然后点击窗口左边的毕业升级学生毕业，继续点击窗口左上面的小学六年','https://dict.youdao.com/dictvoice?le=zh&audio=级2019，再点击小学2019级X班。又点击窗口中间上面毕业状态后面的后选未毕业，点击审核状态后面的后选未发起申请，然后点击查询，在毕业学生姓名前面的方框中打在学籍号前面的方框中打全部选中，然后点击毕业，按是，再按确定。如中心小学毕业学生较多，有许多页，一页一页地操作，所有六年级学生操作毕业后，点击注销退出系统。 下载文件 全国中小学生学籍信息管理系统二期内容说明',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -652,11 +620,7 @@ document.body.addEventListener('input', POWERMODE);
 <a href="/assets/file/2025/07/02-全国中小学生学籍信息管理系统（二期）内容说明（更新）.pdf" target="_blank" style="">全国中小学生学籍信息管理系统（二期）内容说明</a>
 
 </div></div></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2025-07-15 13:20:32 通过 网页 <i class="iconfont icon-view"></i> 浏览(1924) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2025-07-15 13:20:32 通过 网页 <i class="iconfont icon-view"></i> 浏览(2109) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

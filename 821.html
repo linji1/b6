@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=。温馨提示各小学请打开微信上面的2022年第四季度杨家镇小学基础教育季报网址，帐号和密码，按通知要求于2023年2月10日前完成2022年第四季度上报工作，操作流程详见微信上面的参考用杨家镇小学基教教育季报2020年第4季度操作手册有可能个别步骤更新不同了。特别强调在网上直接登录基础教育季报网址即教育统计管理信息系统httpswwwtjxtmoeeducn8000，可能无法进入。解决方法复制以上网址发到自己微信上，在电脑中登录微信后点击该网址可以登录。注幼儿园不用填报杨家镇中心小学管理组2023年2月8日下午">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=。温馨提示各小学请打开微信上面的2022年第四季度杨家镇小学基础教育季报网址，帐号和密码，按通知要求于2023年2月10日前完成2022年第四季度上报工作，操作流程详见微信上面的参考用杨家镇小学基教教育季报2020年第4季度操作手册有可能个别步骤更新不同了。特别强调在网上直接登录基础教育季报网址即教育统计管理信息系统httpswwwtjxtmoeeducn8000，可能无法进入。解决方法复制以上网址发到自己微信上，在电脑中登录微信后点击该网址可以登录。注幼儿园不用填报杨家镇中心小学管理组2023年2月8日下午',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -634,11 +602,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 【温馨提示】各小学：请打开微信上面的《2022年第四季度杨家镇小学基础教育季报网址、帐号和密码》，按通知要求于2023年2月10日前完成2022年第四季度上报工作，操作流程详见微信上面的《（参考用）杨家镇小学基教教育季报_2020年第4季度操作手册》（有可能个别步骤更新不同了）。特别强调：在网上直接登录基础教育季报网址（即“教育统计管理信息系统”：<a href="https://www.tjxt.moe.edu.cn:8000/#/" target="_blank" title="">https://www.tjxt.moe.edu.cn:8000/#/</a>，可能无法进入。解决方法：复制以上网址发到自己微信上，在电脑中登录微信后点击该网址可以登录。（注：幼儿园不用填报）[杨家镇中心小学管理组2023年2月8日下午]</div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2023-02-08 19:02:11 通过 网页 <i class="iconfont icon-view"></i> 浏览(1476) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2023-02-08 19:02:11 通过 网页 <i class="iconfont icon-view"></i> 浏览(1609) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

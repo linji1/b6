@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=20242025学年度第二学期雷州一中高二年级学生周末安排表。周次日期内容周六安排周日安排学生离校与返校安排第1周2月10日2月16日2月13日开学周四2月15日上课语数英2月15晚16日班主任楼层管理周末留校第2周2月17日2月23日上课2月21日周五下午离校返家，2月23日周日下午返校。第3周2月24日3月2日上课3月1日上课选考科目3月1晚2日班主任楼层管理周末留校第4周3月3日3月9日上课3月7日周五下午离校返家，3月9日周白下午返校。第5周3月10日3月16日上课3月15日上课语数英3月15晚16日班主任楼层管理周末留校第6周3月17日3月23日上课3月21日周五下午离校返家，3月2">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=20242025学年度第二学期雷州一中高二年级学生周末安排表。周次日期内容周六安排周日安排学生离校与返校安排第1周2月10日2月16日2月13日开学周四2月15日上课语数英2月15晚16日班主任楼层管理周末留校第2周2月17日2月23日上课2月21日周五下午离校返家，2月23日周日下午返校。第3周2月24日3月2日上课3月1日上课选考科目3月1晚2日班主任楼层管理周末留校第4周3月3日3月9日上课3月7日周五下午离校返家，3月9日周白下午返校。第5周3月10日3月16日上课3月15日上课语数英3月15晚16日班主任楼层管理周末留校第6周3月17日3月23日上课3月21日周五下午离校返家，3月2','https://dict.youdao.com/dictvoice?le=zh&audio=3日周日下午返校。第7周3月24日3月30日上课3月29日上课选考科目3月29晚30日班主任楼层管理周末留校第8周3月31日4月6日上课4号周五清明节4月3日周四下午离校返家，4月6日周日下午返校。第9周4月7日4月13日上课4月12日上课语数英4月12晚13日班主任楼层管理周末留校第10周4月14日4月20日上课4月18日周五下午离校返家，4月20日周日下午返校。第11周4月21日4月27日上课4月25晚26日班主任楼层管理4月27日上课按节日调休课程周末留校第12周4月28日5月4日上课1号周四劳动节4月30日周三下午离校返家。第13周5月5日5月11日上课5月10日上课选科科目5月10晚','https://dict.youdao.com/dictvoice?le=zh&audio=11日班主任楼层管理5月5日周一下午返校。周末留校第14周5月12日5月18日上课5月16日周五下午离校返家。5月18日周日下午返校。第15周5月19日5月25日上课5月24日上课语数英5月24晚25日班主任楼层管理周末留校第16周5月26日6月1日上课31号周六端午节5月30日周五下午离校返家。第17周6月2日6月8日上课7，8，9号高考6月2日周一下午返校，6月6日周五上午离校返家。第18周6月9日6月15日上课6月14日上课选考科目6月14晚15日班主任楼层管理6月9日周一下午返校周末留校第19周6月16日6月22日上课6月20日周五下午离校返家，6月22日周日下午返校。第20周6月23','https://dict.youdao.com/dictvoice?le=zh&audio=日6月29日上课6月28日上课语数英6月28日周六下午离校返家。第21周6月30日7月6日上课6月30日至7月2日中考7月5日上课选考科目7月5晚6日班主任楼层管理7月2日周三下午返校。周末留校第22周7月7日7月13日期末考试，7月12日放暑假拟7月11日周五下午离校返家。注具体情况以实际通知为准，2025年2月14日启用。林肖乐2025年2月16日星期六进入一中就读。',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -638,11 +606,7 @@ document.body.addEventListener('input', POWERMODE);
 <a href="/assets/file/2025/02/2025022038.webp" data-fancybox="gallery" style=""><img src="/assets/file/2025/02/2025022038.webp" data-extentions-extra-ocr-id="49d20df34882d871c6dbe38587b80b8e"></a>
 
 <a href="/assets/file/2025/02/2025022039.webp" data-fancybox="gallery"><img src="/assets/file/2025/02/2025022039.webp" data-extentions-extra-ocr-id="cb3db1521f37a870883efce8619be61a"></a></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2025-02-16 15:27:32 通过 网页 <i class="iconfont icon-view"></i> 浏览(1301) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2025-02-16 15:27:32 通过 网页 <i class="iconfont icon-view"></i> 浏览(1476) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

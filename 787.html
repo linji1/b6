@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=。关于加强本周末疫情防控工作的通知各镇街各部门鉴于当前湛江市疫情防控形势的严峻性复杂性，为快速有效阻断疫情扩散蔓延，保障广大市民健康安全，现就有关事项通知如下。一，非必要不离雷，减少外出聚集。各镇街各部门要增强疫情防控意识，全体干部职工及亲属尽量减少外出和聚集，倡导非必要不离雷，非必要不前往高风险地区，确需离雷的须严格履行报批手续，由单位主要负责同志审批，并在离开雷州期间做好个人防护，返回后落实核酸落地检和3天2检。二，做好高风险地区旅居史人员排查。各镇街各部门要全面排查本辖区本单位近期有高风险地区旅居史的人员，收集相关人员信息，严格落实核酸检测，健康监测等管控措施。三，倡导高风险地区人员非必">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=。关于加强本周末疫情防控工作的通知各镇街各部门鉴于当前湛江市疫情防控形势的严峻性复杂性，为快速有效阻断疫情扩散蔓延，保障广大市民健康安全，现就有关事项通知如下。一，非必要不离雷，减少外出聚集。各镇街各部门要增强疫情防控意识，全体干部职工及亲属尽量减少外出和聚集，倡导非必要不离雷，非必要不前往高风险地区，确需离雷的须严格履行报批手续，由单位主要负责同志审批，并在离开雷州期间做好个人防护，返回后落实核酸落地检和3天2检。二，做好高风险地区旅居史人员排查。各镇街各部门要全面排查本辖区本单位近期有高风险地区旅居史的人员，收集相关人员信息，严格落实核酸检测，健康监测等管控措施。三，倡导高风险地区人员非必','https://dict.youdao.com/dictvoice?le=zh&audio=要暂不返雷。各镇街各部门积极倡导在高风险地区的干部职工及亲属朋友，非必要暂不返雷，如确需返回务必提前向所在单位和村社区报备，并按规定落实好相应管控措施。四，加强值班值守。各镇街各部门要听从统一调度，落实班子成员带班，值班人员24小时在岗值守工作制度，全体干部职工随时待命，接到任务后须半小时内到岗，全力抓好疫情防控各项工作。中共雷州市委办公室，雷州市人民政府办公室2022年11月25日',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -640,11 +608,7 @@ document.body.addEventListener('input', POWERMODE);
 <p style="text-indent:40px;">二、做好高风险地区旅居史人员排查。各镇（街）各部门要全面排查本辖区本单位近期有高风险地区旅居史的人员，收集相关人员信息，严格落实核酸检测、健康监测等管控措施。</p>
 <p style="text-indent:40px;">三、倡导高风险地区人员非必要暂不返雷。各镇（街）各部门积极倡导在高风险地区的干部职工及亲属朋友，非必要暂不返雷，如确需返回务必提前向所在单位和村（社区）报备，并按规定落实好相应管控措施。</p>
 <p style="text-indent:40px;">四、加强值班值守。各镇（街）各部门要听从统一调度，落实班子成员带班、值班人员24小时在岗值守工作制度，全体干部职工随时待命，接到任务后须半小时内到岗，全力抓好疫情防控各项工作。</p><div style="text-align: right;">中共雷州市委办公室、雷州市人民政府办公室<br>2022年11月25日</div></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2022-11-25 20:29:07 通过 网页 <i class="iconfont icon-view"></i> 浏览(1629) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2022-11-25 20:29:07 通过 网页 <i class="iconfont icon-view"></i> 浏览(1769) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=1530小助手安全提醒智能工具。尊敬的各位校长大家晚上好为切实加强青少年安全教育，落实教育部1530安全教育模式，学校已引进1530小助手智能工具，供老师们免费使用。该工具能有效减轻工作负担，确保安全教育的及时性，针对性和有效性。现请各校按照以下要求做好学校安全工作1每天放学前1分钟，对学生进行安全提醒。2每周放学前5分钟，开展安全教育。3每个节假日放假前30分钟，进行详细的安全教育和提醒。1530小助手将提供丰富的安全教育资源和便捷的提醒功能，助力老师们更好地完成安全教育任务，确保学生安全。希望各校能积极配合，共同为学生的安全保驾护航。感谢各位的支持与配合杨家镇中心小学2025年10月27日">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=1530小助手安全提醒智能工具。尊敬的各位校长大家晚上好为切实加强青少年安全教育，落实教育部1530安全教育模式，学校已引进1530小助手智能工具，供老师们免费使用。该工具能有效减轻工作负担，确保安全教育的及时性，针对性和有效性。现请各校按照以下要求做好学校安全工作1每天放学前1分钟，对学生进行安全提醒。2每周放学前5分钟，开展安全教育。3每个节假日放假前30分钟，进行详细的安全教育和提醒。1530小助手将提供丰富的安全教育资源和便捷的提醒功能，助力老师们更好地完成安全教育任务，确保学生安全。希望各校能积极配合，共同为学生的安全保驾护航。感谢各位的支持与配合杨家镇中心小学2025年10月27日','https://dict.youdao.com/dictvoice?le=zh&audio=说明根据教育部要求切实加强青少年群体安全教育，积极推行1530安全教育模式即每天放学前1分钟，每周放学前5分钟，每个节假日放假前30分钟，对学生进行安全提醒和安全教育，我们专门研制了1530小助手智能工具，供免费使用，目的是减轻学校班主任和教师的工作负担，同时落实好1530安全教育，提高1530的及时性，针对性和有效性减负不减责任。1530小助手，将根据不同区域，不同年级，即时自动生成定制化的1530安全提醒内容文字，图片，视频等，方便广大教师便捷高效的落实1530安全教育。具体操作详见下方手册。 下载文件 1，1530小助手学校管理员版操作手册pdf2，1530小助手教师版操作手册pdf3，','https://dict.youdao.com/dictvoice?le=zh&audio=1530小助手家长版操作手册pdf',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -648,11 +616,7 @@ double：双线；groove：槽线；ridge：脊线；inset：内凹；outset：�
 <a href="/assets1/file/2025/10/“1530”小助手家长版操作手册.pdf" target="_blank" style="">3、“1530”小助手家长版操作手册.pdf</a>
 
 </div></div></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2025-10-27 23:03:28 通过 网页 <i class="iconfont icon-view"></i> 浏览(800) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2025-10-27 23:03:28 通过 网页 <i class="iconfont icon-view"></i> 浏览(998) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->

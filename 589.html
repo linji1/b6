@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=。会议通知各中学，中心小学，市直校园现定于4月22日星期三上午10时30分在局一楼会议室召开住房补贴调整，教师生活补贴预报第二季度教师生活补贴承诺书和绩效工资工作会议，请各校派负责工资，统计人员依时参加会议参加会议人员需佩戴口罩。雷州市教育局1养老保险新办法计发待遇工作。 2调整2020年房补2020年住房补贴按照2019年12月应发工资的13发放2019年住房补贴按照应发工资10发放，今年比去年住房补贴每人增加170元300元，从2020年1月执行，五月工资不仅调整新的住房补贴，还补发14月份增加的差额部分。调整和补发全部在工资卡上发放。">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=。会议通知各中学，中心小学，市直校园现定于4月22日星期三上午10时30分在局一楼会议室召开住房补贴调整，教师生活补贴预报第二季度教师生活补贴承诺书和绩效工资工作会议，请各校派负责工资，统计人员依时参加会议参加会议人员需佩戴口罩。雷州市教育局1养老保险新办法计发待遇工作。 2调整2020年房补2020年住房补贴按照2019年12月应发工资的13发放2019年住房补贴按照应发工资10发放，今年比去年住房补贴每人增加170元300元，从2020年1月执行，五月工资不仅调整新的住房补贴，还补发14月份增加的差额部分。调整和补发全部在工资卡上发放。',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -635,11 +603,7 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 【会议通知】各中学、中心小学、市直校（园）：现定于4月22日（星期三）上午10时30分在局一楼会议室召开住房补贴调整、教师生活补贴（预报第二季度教师生活补贴承诺书）和绩效工资工作会议，请各校派负责工资、统计人员依时参加会议（参加会议人员需佩戴口罩）。【雷州市教育局】<br><br>
 1.养老保险新办法计发待遇工作。 2.调整2020年房补：2020年住房补贴按照2019年12月应发工资的13%发放（2019年住房补贴按照应发工资10%发放，今年比去年住房补贴每人增加170元-300元，从2020年1月执行，五月工资不仅调整新的住房补贴，还补发1-4月份增加的差额部分。调整和补发全部在工资卡上发放。</div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2020-04-22 13:52:53 通过 手机 <i class="iconfont icon-view"></i> 浏览(5737) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2020-04-22 13:52:53 通过 手机 <i class="iconfont icon-view"></i> 浏览(5915) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->
@@ -649,7 +613,7 @@ document.body.addEventListener('input', POWERMODE);
 <p style="color: #999;"><i class="fa fa-angle-left em12" style="color: #d0d0d0;"></i>
 <i class="fa fa-angle-left em12 mr6" style="margin-right: 6px;color: #d0d0d0;"></i>
 上一篇</p>
-<a class="pre" href="/b2/587.html"><div style="height: 3.2em;overflow: hidden;">2025年度继续教育学时</div></a></div>
+<a class="pre" href="/b2/587.html"><div style="height: 3.2em;overflow: hidden;">2026年度继续教育学时</div></a></div>
 
 <div id="predown">
 <p style="color: #999;">下一篇

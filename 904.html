@@ -61,7 +61,6 @@
 <script type="text/javascript" language="javascript" src="/assets/js/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/qblog/fontawesome.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="/assets/js/readmore.js" type="text/javascript"></script>
 <!-- fancyBox 5 -->
 <link rel="stylesheet" href="/assets/js/fancybox/fancybox.min.css" media="all" onload="this.media='all'" />
 <script src="/assets/js/fancybox/fancybox.umd.min.js"></script>
@@ -585,38 +584,7 @@ document.body.addEventListener('input', POWERMODE);
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<audio id="audioPlayer" controls preload style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;" title="收听本文" src="https://dict.youdao.com/dictvoice?le=zh&audio=。通知各中学，中心小学，市直校园根据昨天2月28日湛江市教育局召开的教师培训工作会议精神，现将近段有关培训工作通知如下 一，湛江市教师发展中心今年打算不举办初中及高中职务培训，将考虑以其他方式对教师所需学时进行兜底，寒假研修和暑期研修的16学时作为其中必备专业学时。各校需督促所有教师在国家智慧教育平台完成2024年寒假研修学习任务。研修截止时间为2024年3月31日，逾期后果自负注寒假研修和暑期研修是教育部主导下的教师常态化研修活动。 二，2023年公需科目学习截止时间为2024年4月30日，但截至今天上午还有约1700名教师未完成学习，各校要提醒未完成学习任务的教师尽快登录广东省教师继续教育">
-  您的浏览器不支持 audio 元素。
-</audio>
 <span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
-
-    <script>
-        const audioPlayer = document.getElementById('audioPlayer');
-        const audioFiles = [
-            'https://dict.youdao.com/dictvoice?le=zh&audio=。通知各中学，中心小学，市直校园根据昨天2月28日湛江市教育局召开的教师培训工作会议精神，现将近段有关培训工作通知如下 一，湛江市教师发展中心今年打算不举办初中及高中职务培训，将考虑以其他方式对教师所需学时进行兜底，寒假研修和暑期研修的16学时作为其中必备专业学时。各校需督促所有教师在国家智慧教育平台完成2024年寒假研修学习任务。研修截止时间为2024年3月31日，逾期后果自负注寒假研修和暑期研修是教育部主导下的教师常态化研修活动。 二，2023年公需科目学习截止时间为2024年4月30日，但截至今天上午还有约1700名教师未完成学习，各校要提醒未完成学习任务的教师尽快登录广东省教师继续教育','https://dict.youdao.com/dictvoice?le=zh&audio=信息管理平台完成学习，以免影响教师资格证五年一审。 三，未完成2022年初中教师全员轮训任务9天集中面授的学校及未完成2023年小学教师全员轮训任务小学数学，英语教师12天集中面授的学校请尽快安排时间完成在初中教师全员轮训资料县级初审中出现天数不足的一定要真真正正开展培训，补足天数。特别提醒，此项工作绝不允许弄虚作假，需按通知中的课程做足天数。弄虚作假者，后果自负。在组织实施培训时，各校务必按照规范流程开展，要成立授课专家遴选小组，加强培训专家的选聘，教材资料与课件的审核，审核后需将拟选专家的材料含专家介绍及职称复印件，上课教材资料与课件通过相关链接送到雷州市教师发展中心，由中心再次审查把关。','https://dict.youdao.com/dictvoice?le=zh&audio= 四，已完成2022年及2023年轮训集中面授的学校赶于下周将佐证资料纸质版加盖学校公章送到雷州市教育局七楼教师发展2室，电子版打包同时发送至邮箱lzjys8852306163com。 五，2024年雷州市教师全员轮训工作具体安排将在湛江市相关通知下达后另行通知。雷州市教师发展中心20240229所有人',        ];
-        let currentTrack = 0;
-
-        // 点击播放按钮时开始播放
-        function playAudio() {
-            if (currentTrack < audioFiles.length) {
-                audioPlayer.src = audioFiles[currentTrack];
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        // 绑定播放按钮的点击事件
-        audioPlayer.addEventListener('click', playAudio);
-
-        // 监听播放结束事件
-        audioPlayer.addEventListener('ended', () => {
-            currentTrack++;
-            if (currentTrack < audioFiles.length) {
-                playAudio(); // 自动播放下一首
-            }
-        });
-    </script>
 
 <style type="text/css">
 	span#translate select {
@@ -639,11 +607,7 @@ document.body.addEventListener('input', POWERMODE);
  <p>三、未完成2022年初中教师全员轮训任务（9天集中面授）的学校及未完成2023年小学教师全员轮训任务（小学数学、英语教师12天集中面授）的学校请尽快安排时间完成（在初中教师全员轮训资料县级初审中出现天数不足的一定要真真正正开展培训，补足天数。特别提醒，此项工作绝不允许弄虚作假，需按通知中的课程做足天数。弄虚作假者，后果自负）。在组织实施培训时，各校务必按照规范流程开展，要成立授课专家遴选小组，加强培训专家的选聘、教材（资料）与课件的审核，审核后需将拟选专家的材料（含专家介绍及职称复印件）、上课教材（资料）与课件通过相关链接送到雷州市教师发展中心，由中心再次审查把关。</p>
  <p>四、已完成2022年及2023年轮训集中面授的学校赶于下周将佐证资料纸质版（加盖学校公章）送到雷州市教育局七楼教师发展2室，电子版打包同时发送至邮箱：lzjys8852306@163.com。</p>
  <p>五、2024年雷州市教师全员轮训工作具体安排将在湛江市相关通知下达后另行通知。【雷州市教师发展中心2024.02.29】@所有人</p></div>
-<div class="readall_box">
-          <div class="read_more_mask"></div>
-          <a class="read_more_btn" target="_self">阅读全文 <i class="fa fa-angle-down" aria-hidden="true" style="font-size: 18px; color: #ca0c16;vertical-align:middle;"></i></a>
-      </div>
-<p class="time clb">相关通知 2024-02-29 19:02:17 通过 网页 <i class="iconfont icon-view"></i> 浏览(1376) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2024-02-29 19:02:17 通过 网页 <i class="iconfont icon-view"></i> 浏览(1511) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->
