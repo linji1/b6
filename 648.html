@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -637,7 +640,7 @@ document.body.addEventListener('input', POWERMODE);
 1.签到时间：7：40—8：10分<br>
 2.参加人员：四年级语文教师和分管教学副校长或教导主任<br>3.参加听课教师要佩戴口罩并注意往返安全，希各校按时派员参加，勿误（管理组2021年4月15日下午发送）
 <a href="/assets2/file/2021/04/b_082205_726154432.jpg" data-fancybox="gallery" data-caption=""><img src="/assets2/file/2021/04/b_082205_726154432.jpg" style="max-width:100%;" class=""></a><a href="/assets2/file/2021/04/b_092142_1577173262.jpg" data-fancybox="gallery" data-caption=""><img src="/assets2/file/2021/04/b_092142_1577173262.jpg" style="max-width:100%;"></a></div>
-</div><p class="time clb">相关通知 2021-04-15 21:35:57 通过 网页 <i class="iconfont icon-view"></i> 浏览(3410) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2021-04-15 21:35:57 通过 网页 <i class="iconfont icon-view"></i> 浏览(3412) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

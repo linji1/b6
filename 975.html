@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 【培训通知】雷州市公安局定于10月19日（星期六）上午8:30在雷州市体育馆开展校园最小应急单元安保人员演练培训。参加人员：各镇圩上的中小学校、幼儿园（不包含农村小学、农村幼儿园）分管安全工作领导，安保力量（最少3人，除值班人员外）。各参赛队伍保安员需着保安服装并携带“八件套”〔包括防暴头盔（1顶/人）、防护盾牌（1副）、防刺背心（1套/人）、防割手套（1副/人）、橡胶警棍（1支）、强光电筒（1支/人）、自卫喷雾剂（1支/人）、安全钢叉（1套）〕。请各镇中心小学负责通知镇圩上的小学和幼儿园参加。各参加人员提前15分钟报到。注：雷城街道、西湖街道、新城街道、白沙镇、附城镇辖区的校（园）于上周日已培训，无需再参加本次培训。联系人：公安局 何俊锋13590022206，教育局 吴妃耀 19124843050。【雷州市公安局 雷州市教育局 2024.10.18】</div>
-</div><p class="time clb">相关通知 2024-10-18 11:08:28 通过 手机 <i class="iconfont icon-view"></i> 浏览(1412) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2024-10-18 11:08:28 通过 手机 <i class="iconfont icon-view"></i> 浏览(1414) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

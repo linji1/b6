@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p>【广东第二师范学院】老师您好，您已报名2025年广东省教师选修课学习培训，培训时间于2025年12月31日截止，请登录广东二师在线（http://online.gdei.edu.cn/）进行选课学习。账号：身份证件号；密码：xxpx@25Gd , 注意G要大写、d要小写。若无法登录学习，请联系“培训负责人”或“在线客服”，热线400-998-9352。</p></div>
-</div><p class="time clb">相关通知 2025-09-05 10:00:49 通过 手机 <i class="iconfont icon-view"></i> 浏览(855) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-09-05 10:00:49 通过 手机 <i class="iconfont icon-view"></i> 浏览(856) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

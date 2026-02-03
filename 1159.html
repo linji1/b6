@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p>@所有人 【杨家镇2025年基孔肯雅热疫情防控应急演练通知】</p><p>根据上级要求，经镇党委研究决定，明天(8月25日，周一)上午8时30分于杨家中心小学组织杨家镇2025年基孔肯雅热疫情防控应急演练，具体内容如下：</p><p>一、演练时间地点</p><p>明天(8月25日，周一)上午8时30分于杨家镇中心小学篮球场。</p><p>二、参与人员</p><p>1.市相关领导；</p><p>2.镇全体干部职工；</p><p>3.消防队全体人员(请穿戴工作制服)；</p><p>4.各村党支部书记或负责人</p><p>5.杨家派出所</p><p>6.杨家卫生院</p><p>7.杨家中学、杨家中心小学教师；</p><p>8.杨家卫生站（由卫生院负责通知）</p><p>请各参加人员务必严肃到岗到位纪律，提前到位，严格按照要求参与演练。（联系人：郭沂铭，联系电话：19849060369&nbsp;680369）【杨家镇党政和人大办公室】</p></div>
-</div><p class="time clb">相关通知 2025-08-24 19:37:40 通过 手机 <i class="iconfont icon-view"></i> 浏览(697) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-08-24 19:37:40 通过 手机 <i class="iconfont icon-view"></i> 浏览(699) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

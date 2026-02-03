@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p>【工作提醒】省教育厅布置的系统填报任务，市教育局已直接分发给所有学校（含幼儿园），请各校园<a href="https://xyaq.gdedu.gov.cn/schoolSafe/user/login" target="_blank">登陆系统</a>进行数据填报。于12&nbsp;月&nbsp;19&nbsp;日前完成填报，确保数据真实、准确、无遗漏。</p></div>
-</div><p class="time clb">相关通知 2025-12-19 15:17:39 通过 手机 <i class="iconfont icon-view"></i> 浏览(434) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-12-19 15:17:39 通过 手机 <i class="iconfont icon-view"></i> 浏览(436) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

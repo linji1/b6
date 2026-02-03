@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -721,7 +724,7 @@ document.body.addEventListener('input', POWERMODE);
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（一）本指引所称中小学幼儿园教师指普通中小学、幼儿园、中等职业学校、特殊教育机构、少年宫以及地方教研室、电化教育等机构的教师，包括民办中小学幼儿园的教师。对其他在学校及教育机构工作的人员进行处理，可参照本指引执行。<br><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（二）未尽事宜按照国家和省有关管理规定执行。各地级以上市教育行政部门应结合当地实际情况制定本地区中小学教师违反职业道德行为负面清单及处理办法，并报省教育厅备案。<br><br></div>
-</div><p class="time clb">相关通知 2021-07-06 13:38:52 通过 网页 <i class="iconfont icon-view"></i> 浏览(3591) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2021-07-06 13:38:52 通过 网页 <i class="iconfont icon-view"></i> 浏览(3593) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

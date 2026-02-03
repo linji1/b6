@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <h1>✅202501024-填2025年春季义务教育随班就读残疾学生名册表</h1><div class="text">
 <p>【通知】各小学：1、请各校根据学生残疾证件或残联提供的残疾学生名册确定在校在籍残疾学生，同时结合本校2024年10月上报“广东省教育信息平台”（即是年初报表平台）中的残疾学生情况，于2025年4月28日前把《（XX小学）杨家镇小学2025年春季义务教育随班就读残疾学生名册表》电子版发到后勤工作群（空表已发在微信群上面）。2、同时交来上表纸质版1份和残疾证明（或残联提供并盖章的残疾学生名册）复印件一式三份（要盖本校公章），逾期不交的当作没有随班就读残疾学生。3、实际是残疾学生而没有残疾证明材料不要填报来，这样也没有残疾学生公用经费拨款。［杨家镇中心小学教育指导组2025年4月25日下午］</p></div>
-</div><p class="time clb">相关通知 2025-04-26 03:59:19 通过 网页 <i class="iconfont icon-view"></i> 浏览(1279) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-04-26 03:59:19 通过 网页 <i class="iconfont icon-view"></i> 浏览(1280) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

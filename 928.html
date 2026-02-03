@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 【通知】根据市公安局工作要求，请各校认真落实各项安全措施：一是校领导、行政人员、保安人员、护学岗人员要认真履行职责，熟悉掌握安全底数、设施设备的使用等情况，尤其是安保八件套、一键报警等设备实施的使用，并在学校门口增加两把金属探测仪，做好金属器械入校排查工作，严禁携带刀具等危险物品进入校园；二是上下学高峰期，保安人员必须穿防刺服、持械上岗；三是护学岗设置要科学合理、提前到位；四是校门口防冲撞设施摆放要合理规范；五是严格落实来访登记制度，严禁外来人员入校、外来入校人员必须打电话给校长确认身份后，方可入校。市公安局将不定期进行督导，对落实不到位的学校将予以通报！【雷州市教育局 2024.6.3】</div>
-</div><p class="time clb">相关通知 2024-06-04 08:46:45 通过 手机 <i class="iconfont icon-view"></i> 浏览(1581) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2024-06-04 08:46:45 通过 手机 <i class="iconfont icon-view"></i> 浏览(1583) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

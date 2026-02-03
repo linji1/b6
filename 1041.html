@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -637,7 +640,7 @@ document.body.addEventListener('input', POWERMODE);
 <p>🤵👰囍·♡+♡=♡²·囍🤵👰</p>
 <p>✨〰〰我们结婚啦〰〰✨</p>
 <p>❣有生之年·欣喜相逢❣&nbsp;</p><p>🎈佳期已定·敬备喜宴🎈&nbsp;&nbsp;&nbsp;&nbsp;</p><p>💌此刻收到这封邀请函的你</p><p>👭是在我们生命中最重要的</p><p>🎊诚邀您见证我们的幸福时刻🎊</p><p>新郎：林密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新娘：覃娟</p><p>父亲：林由来&nbsp;&nbsp;&nbsp;&nbsp;母亲：陈木球</p><p>【💒新历】2025年&nbsp;1月15号</p><p>【📆农历】2024年十二月十六日</p><p>【酒宴地址】雷州市杨家镇倜傥上村小学门口</p><p>【开宴时间】中午12点00分</p><p>欢迎各位叔伯婶嫂兄弟姐妹的到来</p></div>
-</div><p class="time clb">相关通知 2025-01-07 11:41:23 通过 手机 <i class="iconfont icon-view"></i> 浏览(1672) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-01-07 11:41:23 通过 手机 <i class="iconfont icon-view"></i> 浏览(1674) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

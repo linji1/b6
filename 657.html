@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 【通知】各小学：根据上级部门要求，2021年秋季实行寄宿制学校招生，部分小学六年级学生到杨家中学寄宿就读，现要求：除中心小、二小、少榄、安榄、宅湾、土塘等小学以外，余下的20间小学要把就读你校的五年级学生姓名及家庭详细地址等信息填报在《杨家镇小学寄宿制学生信息登记表》中（已发在微信群上面），于今天（5月10日）下午4：00前把填好的电子版发到微信收发群，勿误。【杨家镇中心管理组2021年5月10日上午发送】</div>
-</div><p class="time clb">相关通知 2021-05-10 10:24:49 通过 手机 <i class="iconfont icon-view"></i> 浏览(3510) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2021-05-10 10:24:49 通过 手机 <i class="iconfont icon-view"></i> 浏览(3511) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

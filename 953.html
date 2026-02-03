@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 【通知】各小学：1、各校长带来学校公章并派几位教师自带袋子于2024年8月29日上午会议结束后（大约10：45）到管理组资料库领取并清点课本及教辅材料（不清点取回后如果有差错学校自负）。要求当天上午取完课本，签收并盖学校公章；2、如果与订单不相符的请当场联系书店工作人员，询问欠缺原因，确实欠缺的（未运来课本除外），书面写好年级、科目及数量，盖章后交给书店工作人员，以便汇总追加。［杨家镇中心小学教育指导组2024年8月28日下午发送］</div>
-</div><p class="time clb">相关通知 2024-08-28 20:49:01 通过 手机 <i class="iconfont icon-view"></i> 浏览(1400) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2024-08-28 20:49:01 通过 手机 <i class="iconfont icon-view"></i> 浏览(1401) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

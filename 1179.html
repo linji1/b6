@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p style="text-align: center; "><b>【紧急通知】</b></p><p>各小学：</p><p>请打开微信上面的《（杨家中心小学）2025年雷州市义务教育阶段疑似辍学学生信息汇总表》链接，今天（10月27日）下午与你校辖区村委会干部、村干部配合，调查你校辖区学生去向，然后完成下列工作：</p><p>1、把S列的“村委会名称”修改补充完整；</p><p>2、尽量把黄色栏目补充完整；</p><p>3、在校就读的，要求现就读学校出具在读证明交来，在外地就读不方便交的可以拍照证明发回来；</p><p>4、没在校就读的，如果是残疾类型，必须复印残疾证交来，属于其它原因辍学的，要求村委会或派出所出具证明交来。以上工作指导组人员和杨家镇中心小学本部中层干部到时分工跟踪落实，以上工作请于10月28日上午完成。</p><p style="text-align: right; ">［杨家镇中心小学教育指导组2025年10月27日上午］</p></div>
-</div><p class="time clb">相关通知 2025-10-27 12:40:23 通过 手机 <i class="iconfont icon-view"></i> 浏览(906) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-10-27 12:40:23 通过 手机 <i class="iconfont icon-view"></i> 浏览(907) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

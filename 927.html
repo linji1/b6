@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 【通知】各小学：根据卫生局、教育局的通知要求，教育局体检组从明天（6月4日）开始到我镇小学进行学生体检，请各校打印好《雷州市杨家镇XX小学学生健康体检筛查数据模板》备用，具体安排由黄智聪主任负责。黄智聪主任联系手机：13543517970（短号：687970）。［杨家镇中心小学教育指导组2024年6月3日上午发送］</div>
-</div><p class="time clb">相关通知 2024-06-03 12:18:49 通过 网页 <i class="iconfont icon-view"></i> 浏览(1459) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2024-06-03 12:18:49 通过 网页 <i class="iconfont icon-view"></i> 浏览(1460) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

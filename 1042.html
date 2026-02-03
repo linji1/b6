@@ -585,13 +585,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -640,7 +643,7 @@ document.body.addEventListener('input', POWERMODE);
 <p>明天（1月9日），雷州市卫健局到我校对20～70岁年龄段的教职员工（包括所有公办学校、私办校园及托管机构所有公职及临聘人员）进行乙、丙肝免费健康检查，适龄家属也可参加，被检者必须带来本人身份证和本人手机（需要手机号码），时间：1月9日上午8:30至11:30、下午3：00至5：30，地点：本部一楼风雨体育室，望老师们互相转告积极配合。</p>
 <p style="text-align: right;">中心小学管理组<br>
 2025年1月8日</p></div>
-</div><p class="time clb">相关通知 2025-01-08 11:33:57 通过 网页 <i class="iconfont icon-view"></i> 浏览(1718) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-01-08 11:33:57 通过 网页 <i class="iconfont icon-view"></i> 浏览(1719) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <h1>✅202501003-填报学生基本情况统计表</h1><div class="text">
 <p>【通知】各小学、幼儿园：请打开微信群上面的《2024—2025学年度第二学期杨家镇小学生基本情况统计表》共享链接，于2025年2月14日中午前把幼儿至六年级招生回校在班中就坐人数填入表中的橙色栏目的“现生数”栏，其它栏不要修改（过几天学生稳定后再又发表填写）。注意：只填你校（园）数据，一年级填建学籍人数（一年级未建学籍的人数填入幼儿班），不要随意修改表格格式和其它学校的数据，填完后关闭自动保存，不要转发该表格。［杨家镇中心小学教育指导组2025年2月13日下午］</p></div>
-</div><p class="time clb">相关通知 2025-02-14 09:26:33 通过 网页 <i class="iconfont icon-view"></i> 浏览(1332) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-02-14 09:26:33 通过 网页 <i class="iconfont icon-view"></i> 浏览(1333) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -637,7 +640,7 @@ document.body.addEventListener('input', POWERMODE);
 <br><br>
 【通知】各中学、中心小学、市直学校：根据《国家学生体质健康标准》数据上报培训工作的通知要求，定于2022年11月17日下午开展2022年体质健康数据上报培训会议，会议通过线上直播形式，请各学校组织《国家学生体质健康标准》数据上报管理人员参会培训，培训通知通过国家学生体质健康网发布，以下为培训通知及培训通知链接。<a href="http://www.csh.moe.edu.cn/wtzx/zcwj/20221114/8a9496498470b7b3018474aec5940000.html" target="_blank" title="">http://www.csh.moe.edu.cn/wtzx/zcwj/20221114/8a9496498470b7b3018474aec5940000.html</a>
 国家学生体质健康网址（如通过网站首页查看，则需清除浏览器缓存查看培训通知）：<a href="http://www.csh.moe.edu.cn/" target="_blank" title="">www.csh.moe.edu.cn</a>。中心小学负责通知辖区学校数据上报管理人员。【雷州市教育局体卫艺股】</div>
-</div><p class="time clb">相关通知 2022-11-15 17:59:35 通过 网页 <i class="iconfont icon-view"></i> 浏览(1737) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2022-11-15 17:59:35 通过 网页 <i class="iconfont icon-view"></i> 浏览(1739) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

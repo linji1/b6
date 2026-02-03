@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p style="text-align: center; "> 紧急通知</p><p>各校、幼儿园、托育托管机构：</p><p>按照台风黄色预警，各校园要在今天下午放学前召开班会，做好防风防汛等安全教育工作，包括学生放假在家安全教育，强调面上学校教师及家属要在今晚撤离学校、校舍门窗要上锁加固、设备设施要加强放置保管，另外，各校园要在今晚放假前制定防风防讯工作要应急预案、中心小学要成立由何杨为组长的防风防讯领导小组，班子成员要参加防风置班置守等工作。</p><p style="text-align: right; ">杨家中心小学</p><p style="text-align: right; ">2025-9-23</p></div>
-</div><p class="time clb">相关通知 2025-09-23 16:38:08 通过 手机 <i class="iconfont icon-view"></i> 浏览(708) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-09-23 16:38:08 通过 手机 <i class="iconfont icon-view"></i> 浏览(710) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -635,7 +638,7 @@ document.body.addEventListener('input', POWERMODE);
 <h1>广东省普通高考/学考报名</h1><div class="text">
 <p>考生进入“广东省普通高考/学考报名系统”，下称“报名系统”，网址：<a href="https://p.linji.cn/?c=click&id=245" target="_blank">https://pg.eeagd.edu.cn/ks/</a>在规定的时间内凭原普通高中学业水平考试填报的手机号码（或证件号）登录报名系统进行报考。考生必须记住自己注册时设置的个人密码，以便在报名确认和考试成绩查询时使用。 考生密码遗忘或更改手机号，可通过广东省普通高考/学考报名系统的考生端(<a href="https://p.linji.cn/?c=click&amp;id=245" target="_blank">https://pg.eeagd.edu.cn/ks/</a>），凭手机短信验证码进行密码找回。
 </p></div>
-</div><p class="time clb">相关通知 2024-11-14 07:52:40 通过 手机 <i class="iconfont icon-view"></i> 浏览(1749) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2024-11-14 07:52:40 通过 手机 <i class="iconfont icon-view"></i> 浏览(1752) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->

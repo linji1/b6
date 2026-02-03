@@ -583,13 +583,16 @@ document.body.addEventListener('input', POWERMODE);
   <div id="content" style="position: relative;">
     <!-- <head>中添加听读功能样式 -->
 <style>
-  /* 句子高亮样式 */
-.sentence.current {
-  background-color: #fffacd; /* 淡黄色高亮 */
-  border-radius: 3px;
-}
 .sentence {
   cursor: pointer;
+  /* 默认 inline，不破坏排版 */
+}
+.sentence:hover {
+  background-color: #f0f0f0;
+}
+.sentence.current {
+  background-color: #ffeb3b; /* 黄色高亮 */
+  border-radius: 2px;
 }
 </style>
 <!-- 听读控制面板（插入到printview容器前） -->
@@ -634,7 +637,7 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 【雷州市杨家镇中心小学】【通知】各小学：现定于4月30日（星期二）举行期中考试，上午考数学、英语，下午考语文。完卷时间：一、二年级语文各考60分钟，三、四、五、六年级语文各考90分钟；一、二年级数学各考60分钟，三、四、五、六年级数学各考80分钟；三至六年级英语各考60分钟。［管理组2019年4月28日晚上发送］</div>
-</div><p class="time clb">相关通知 2019-04-28 21:28:21 通过 网页 <i class="iconfont icon-view"></i> 浏览(4344) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2019-04-28 21:28:21 通过 网页 <i class="iconfont icon-view"></i> 浏览(4345) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
 	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
