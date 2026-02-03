@@ -581,10 +581,42 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
+    <!-- <head>中添加听读功能样式 -->
+<style>
+  /* 句子高亮样式 */
+.sentence.current {
+  background-color: #fffacd; /* 淡黄色高亮 */
+  border-radius: 3px;
+}
+.sentence {
+  cursor: pointer;
+}
+</style>
+<!-- 听读控制面板（插入到printview容器前） -->
+<div class="reader-panel" style="margin: 20px 0;display: none;">
+  <div class="controls">
+    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
+    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
+    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
+    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
+  </div>
+  <div class="voice-control">
+    <label for="voiceSelect">选择语音</label>
+    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
+  </div>
+  <div class="progress-container">
+    <div class="progress-info">
+      进度: <span id="progressText">0/0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -605,9 +637,9 @@ document.body.addEventListener('input', POWERMODE);
 各小学：<br><p>1、请核对微信上面的《2025年9月至2026年2月杨家镇小学教师奖励性绩效工资汇总表》中的人数和拨款金额是否相符（每个月533元），有异议的电话联系姚权兴同志；</p><p>2、请依据你校的《雷州市杨家镇XX小学教职工奖励性绩效工资考核方案》，按照上学期的考核方法，对本校教职工（含派入支教你校的教师）本学期奖励性绩效工资进行考核（不能考核出全校所有教职工的金额都相同），然后填报《雷州市中小学校奖励性绩效工资考核评分表》（该表最后一列的“绩效金额”要保留整数，并且全校的合计金额要与微信上面的“奖励性绩效工资汇总表”中你校的发放金额相一致）；</p><p>3、考核完毕后把教职工的绩效金额对应填入《（1月30日）杨家镇小学2025年9月至2026年2月教师奖励性绩效工资代拨明细表》中（只填你校的，其它校留空不要删掉），填完后再次核对一下姓名所对应的金额；</p><p>4、用工资报销表填写《2025年9月至2026年2月教师奖励性绩效工资签领表》，要求教师签名并盖章；</p><p>5、特别强调：不要改变《（1月30日）杨家镇小学2025年9月至2026年2月教师奖励性绩效工资代拨明细表》电子版中的姓名顺序和账号（如果某教师换卡或已更新账号与代拨明细表中的账号不一致的，要在2026年1月28日前电话联系姚权兴同志更改），以上三种表格教职工的姓名顺序及金额要一致；</p><p>6、于2026年2月3日前点击校长群上面的“（1月30日）杨家镇小学2025年9月至2026年2月教师奖励性绩效工资代拨明细表（群报数）”，把填好的“奖励性绩效工资代拨明细表”电子版上传在“群报数”中，不准另外发在微信群上；</p><p>7、于2026年2月3日前把《雷州市中小学校奖励性绩效工资考核评分表》和《2025年9月至2026年2月教师奖励性绩效工资签领表》纸质原件及复印件（复印件也要再盖章）各1份交给陈泽同志代收，不要发电子版。</p><p style="text-align: right; ">［杨家镇中心小学教育指导组2026年1月19日上午］</p>
 
 <img data-fancybox="gallery" img-src="/assets/file/2026/01/2026012001.webp" src="/assets/file/2026/01/2026012001.webp" class="zhiche" style="border: 2px dashed #cdc8c8;" loading="lazy"></div>
-<p class="time clb">相关通知 2026-01-20 11:47:05 通过 网页 <i class="iconfont icon-view"></i> 浏览(149) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2026-01-20 11:47:05 通过 网页 <i class="iconfont icon-view"></i> 浏览(195) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -968,5 +1000,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
+<!-- </body>前插入听读核心JS -->
+<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

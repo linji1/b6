@@ -581,10 +581,42 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
+    <!-- <head>中添加听读功能样式 -->
+<style>
+  /* 句子高亮样式 */
+.sentence.current {
+  background-color: #fffacd; /* 淡黄色高亮 */
+  border-radius: 3px;
+}
+.sentence {
+  cursor: pointer;
+}
+</style>
+<!-- 听读控制面板（插入到printview容器前） -->
+<div class="reader-panel" style="margin: 20px 0;display: none;">
+  <div class="controls">
+    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
+    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
+    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
+    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
+  </div>
+  <div class="voice-control">
+    <label for="voiceSelect">选择语音</label>
+    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
+  </div>
+  <div class="progress-container">
+    <div class="progress-info">
+      进度: <span id="progressText">0/0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -604,9 +636,9 @@ document.body.addEventListener('input', POWERMODE);
 <p>【通知】各小学：1、请认真阅读微信上面的“学生在校情况核查”相关文件，结合学籍系统中的数据，把“人籍分离”（本学期学生在你校而学籍未转入）和“空挂学籍”（本学期学生不在你校而学籍还在你校）这两类学生按表格要求填入《附件1：雷州市杨家镇小学学生在校情况核查情况统计表（2025.3）》中，于2025年3月28日前把附件1电子版上传到“群报数”。2、学生人籍一致的也要填“无”上传到“群报数”中。3、打印微信上面的《告知书》签名盖章于2025年3月26日下午放学前交到指导组。［杨家镇中心小学教育指导组2025年3月25日下午］</p>
 
 <table border="1" style="border-collapse: collapse;font-size: 10px;max-width: 100%;text-align: center;"><tbody><tr><td colspan="13" style="text-align: left;">附件1：</td></tr><tr><td colspan="13" style="text-align:center;">雷州市义务教育阶段学校学生在校情况核查情况统计表</td></tr><tr><td colspan="13" style="text-align: right;">填报时间：2025年3月25日</td></tr><tr><td style="width: 48px;">序号</td><td style="width: 90px;">县（市、区）</td><td style="width: 68px;">学校名称</td><td style="width: 68px;">学生姓名</td><td style="width: 68px;">身份证号</td><td style="width: 48px;">年级</td><td style="width: 68px;">问题情况</td><td style="width: 100px;line-height: 1.5em;">相关学校所属县（市、区）</td><td style="width: 68px;">是否新增</td><td style="width: 80px;">是否本学期新增</td><td style="width: 68px;">是否整改</td><td style="width: 88px;">是否本次更新</td><td style="width: 72px;">情况说明</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan="2">主要领导：</td><td></td><td colspan="2">分管领导：</td><td></td><td colspan="2">填报人：</td><td></td><td colspan="4" style="text-align: left;">填报人联系电话：</td></tr><tr><td colspan="13" style="text-align: left;">（备注：“是否新增”以2024年9月为期，此前的是历史遗留问题，此后的是新增问题。“情况说明”列要详细说明进展情况，如本学期新增的，需写明新增原因。上报时请删除此行备注。）</td></tr></tbody></table></div>
-<p class="time clb">相关通知 2025-03-25 22:16:18 通过 网页 <i class="iconfont icon-view"></i> 浏览(1167) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-03-25 22:16:18 通过 网页 <i class="iconfont icon-view"></i> 浏览(1185) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -967,5 +999,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
+<!-- </body>前插入听读核心JS -->
+<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

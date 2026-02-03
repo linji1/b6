@@ -581,10 +581,42 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
+    <!-- <head>中添加听读功能样式 -->
+<style>
+  /* 句子高亮样式 */
+.sentence.current {
+  background-color: #fffacd; /* 淡黄色高亮 */
+  border-radius: 3px;
+}
+.sentence {
+  cursor: pointer;
+}
+</style>
+<!-- 听读控制面板（插入到printview容器前） -->
+<div class="reader-panel" style="margin: 20px 0;display: none;">
+  <div class="controls">
+    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
+    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
+    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
+    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
+  </div>
+  <div class="voice-control">
+    <label for="voiceSelect">选择语音</label>
+    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
+  </div>
+  <div class="progress-container">
+    <div class="progress-info">
+      进度: <span id="progressText">0/0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -608,9 +640,9 @@ none：无样式；dotted：点线；dashed：虚线；solid：实线；
 double：双线；groove：槽线；ridge：脊线；inset：内凹；outset：外凸。">
 
 <p>【工作通知】关于持续做好适龄儿童疫苗补种及入学查验工作的通知</p><p>各小学、幼儿园：</p><p>在市委、市政府的坚强领导下，经全市上下6月份集中攻坚，我市适龄儿童疫苗查漏补种工作取得显著成效：累计补种35,263人次，未达标疫苗剂次已由7种减少至4种。目前未达标的4种剂次中，百白破疫苗第三、四剂次接种率已接近90%，有望于8月前实现达标。当前正值暑假，是推进补种工作的关键窗口期。 为进一步筑牢适龄儿童免疫屏障，保障秋季顺利入学，现将有关要求通知如下：</p><p>1.压实主体责任，强化假期攻坚：各小学、幼儿园要高度重视，明确任务分工，压实工作责任。务必充分利用暑假窗口期，通过家长群、电话、家访等多种渠道，持续、精准督促未完成全程接种的儿童家长，确保在开学前带孩子到指定接种点完成补种。</p><p>2.严格执行入学查验制度：2025年秋季学期新生入学（入园）报名时，所有新入学儿童必须凭有效的《预防接种查验证明》办理报名手续。各校（园）须严格审核，坚决执行“无有效查验证明者暂缓办理入学（入园）手续”的规定，确保查验证明提交率达100%。</p><p>3.强化联合督导与严肃问责：2025年秋季开学后，市教育局将联合市卫生健康局对全市小学、幼儿园新生预防接种查验及补种情况进行专项检查。凡检查发现存在未严格落实查验要求（即未持有有效查验证明的儿童已办理入学/入园手续）的单位，将予以全市通报批评，并严肃追究相关责任人的责任。</p><p>请各单位务必提高政治站位，迅速行动，狠抓落实，确保我市适龄儿童免疫规划疫苗接种率全面达标，切实筑牢校园健康防线。</p><p style="text-align: right;">雷州市教育局</p><p style="text-align: right;">2025年7月5日</p></div>
-<p class="time clb">相关通知 2025-07-05 16:20:33 通过 手机 <i class="iconfont icon-view"></i> 浏览(926) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-07-05 16:20:33 通过 手机 <i class="iconfont icon-view"></i> 浏览(955) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -971,5 +1003,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
+<!-- </body>前插入听读核心JS -->
+<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

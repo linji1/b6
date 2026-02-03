@@ -581,10 +581,42 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
+    <!-- <head>中添加听读功能样式 -->
+<style>
+  /* 句子高亮样式 */
+.sentence.current {
+  background-color: #fffacd; /* 淡黄色高亮 */
+  border-radius: 3px;
+}
+.sentence {
+  cursor: pointer;
+}
+</style>
+<!-- 听读控制面板（插入到printview容器前） -->
+<div class="reader-panel" style="margin: 20px 0;display: none;">
+  <div class="controls">
+    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
+    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
+    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
+    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
+  </div>
+  <div class="voice-control">
+    <label for="voiceSelect">选择语音</label>
+    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
+  </div>
+  <div class="progress-container">
+    <div class="progress-info">
+      进度: <span id="progressText">0/0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -602,9 +634,9 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p>【工作提醒】：</p><p>1.请各单位做干部人事档案专项审核前，要留意99版干部履历表形成时间，99版干部履历表最后落款时间要早于专项审核落款时间(填好干部履历表后再做档案审核)。</p><p>2.高中期间曾转学，高中学籍与毕业证书落款盖章为最后一所学校，其学习经历如何填写？</p><p>答：按照转学时间，如实分段填写。</p><p>3.高中学籍档案里无高考报考志愿表及成绩通知书，如何补足相关证明材料？</p><p>答：湛江市教育局表示，一般学校会将高考报考志愿表及成绩通知书放入考生个人学籍档案，但2019年后多数学校不再放纸质志愿表及成绩通知书，而是以网络形式填写。2010年后参加高考的考生没有相应高考志愿表及成绩通知书，如确实需要相关纸质证明，可到湛江市教育局招生办开具《普通高考报考及录取证明》。注意，2010年之前已高考录取的考生则无法提供证明。</p><p>4.部分无法查找高中学籍材料的考生，如何找补证明材料？</p><p>答：湛江市教育局可查询1996年后毕业的本地区学生学籍信息，并出具《湛江市普通高中学历证明》。《湛江市普通高中学历证明》相当于高中毕业证书，可证明考生当时毕业学校及时间，但无法明确此前是否有转学等学习经历（雷州市教育局可查询1994年后&nbsp;）。</p><p>5.按上级相关部门的指导意见，为规范学历表述，中等职业学校毕业的记为“中职”；中等师范学校毕业的记为“中师”；中等专业学校毕业的记为“中专”；大学专科毕业的记为“大专”；大学本科毕业的记为“大学”。</p><p>6.一年制的中职、中师、中专学历，均不能认定为全日制学历。</p><p>7.籍贯、出生地规范表述为：“写某省某县（县级市），属市辖区的写某省某市（不写到区）”。如：广东雷州、广东徐闻、广东湛江。</p></div>
-<p class="time clb">相关通知 2025-06-16 12:02:05 通过 手机 <i class="iconfont icon-view"></i> 浏览(955) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-06-16 12:02:05 通过 手机 <i class="iconfont icon-view"></i> 浏览(975) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -965,5 +997,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
+<!-- </body>前插入听读核心JS -->
+<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

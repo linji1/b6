@@ -581,10 +581,42 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
+    <!-- <head>中添加听读功能样式 -->
+<style>
+  /* 句子高亮样式 */
+.sentence.current {
+  background-color: #fffacd; /* 淡黄色高亮 */
+  border-radius: 3px;
+}
+.sentence {
+  cursor: pointer;
+}
+</style>
+<!-- 听读控制面板（插入到printview容器前） -->
+<div class="reader-panel" style="margin: 20px 0;display: none;">
+  <div class="controls">
+    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
+    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
+    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
+    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
+  </div>
+  <div class="voice-control">
+    <label for="voiceSelect">选择语音</label>
+    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
+  </div>
+  <div class="progress-container">
+    <div class="progress-info">
+      进度: <span id="progressText">0/0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -602,9 +634,9 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p style="text-align: center; ">【温馨提示】</p><p>各小学：2026年1月工资扣个人所得税名单已发在上面，请查看，个人所得税比上个月少扣几元，工资也比上个月少了几十元不等。现解释如下：</p><p>（1）11月底已发了《机关事业单位基本养老保险2026年度缴费工资申报表》让老师查看对比基数，由于2025年1月份调整工资，教师增加了几百元不等，同时2025年6月也增加晋升工资几十元不等，因此，从表中可以看出教师2025年比2024年月平均工资高得多；</p><p>（2）2026年1月起就按2025年的“月平均工资”作为缴费工资基数扣缴养老保险（缴费工资基数×8%）和年金（缴费工资基数×4%），由于缴费工资基数高了，2026年1月就多扣了养老保险和年金。因此，2026年1月份工资比上个月少几十元不等；</p><p>（3）有的老师领取实发工资超过5000元，但未在手机个人所得税APP中操作，也扣了个人所得税，详见微信上面的《扣个人所得税名单》，工资少了扣税也少几元。</p><p>（4）如果有符合个人所得税七项扣除而未操作的老师，请通知他们这几天补操作。</p><p>（5）这几天可派人到指导组取回你校教师2026年1月的《工资代扣款项明细表》让教师查看，下周发来工资时各教师再核对工资簿，教师有异议的校长根据上面内容先做好解释，确实错误的再咨询姚权兴同志。《工资代扣款项明细表》不准拍照、不准转发、不准外传。</p><p style="text-align: right; ">［杨家镇中心小学教育指导组2026年1月15日上午］</p></div>
-<p class="time clb">相关通知 2026-01-15 09:45:29 通过 手机 <i class="iconfont icon-view"></i> 浏览(176) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2026-01-15 09:45:29 通过 手机 <i class="iconfont icon-view"></i> 浏览(206) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -965,5 +997,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
+<!-- </body>前插入听读核心JS -->
+<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

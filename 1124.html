@@ -581,10 +581,42 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
+    <!-- <head>中添加听读功能样式 -->
+<style>
+  /* 句子高亮样式 */
+.sentence.current {
+  background-color: #fffacd; /* 淡黄色高亮 */
+  border-radius: 3px;
+}
+.sentence {
+  cursor: pointer;
+}
+</style>
+<!-- 听读控制面板（插入到printview容器前） -->
+<div class="reader-panel" style="margin: 20px 0;display: none;">
+  <div class="controls">
+    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
+    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
+    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
+    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
+  </div>
+  <div class="voice-control">
+    <label for="voiceSelect">选择语音</label>
+    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
+  </div>
+  <div class="progress-container">
+    <div class="progress-info">
+      进度: <span id="progressText">0/0</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -602,9 +634,9 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <div class="text">
 <p>【雷州市教育局】【复课通知】雷州市气象台于6月15日08时解除雷州市台风预警信号，现决定全市中小学、幼儿园、校外培训机构于6月16日（星期一）全面复课，恢复正常教学秩序。请各学校做好复课准备，及时通知学生按时返校上课，并提醒学生注意上学路上安全。</p><p>【雷州市教育局】【停课通知】受台风“蝴蝶”（热带风暴级）影响，我市气象台于6月12日17时13分发出台风黄色预警信号。根据《广东省气象灾害预警信号发布规定》，6月13日（星期五）起全市各中小学、幼儿园、校外培训机构停课，请各中小学、幼儿园、校外培训机构妥善安排学生安全离校回家，做好各方面防御工作，同时密切关注台风最新消息和复课通知。</p><p>【防风通知】6月11日15时，台风“蝴蝶”（热带风暴级）位于雷州东南方约510公里的海面上，预计24小时内将受其影响，风力可达6级以上，从6月11日16时06分起，雷州市台风蓝色预警信号生效。各学校要高度重视，严格落实各项防御措施，确保师生生命安全。一要加强组织领导落实主体责任。各学校要克服麻痹思想和侥幸心理，严格落实值班制度，强化值守巡查。二要加强预警通知。通过短信、微信等方式，及时向师生发送预警信息，引导出行和出游的师生提前调整计划。三是加强隐患排查和风险管控。对学校区域内的各种风险隐患点和可能发生次生灾害的地点进行排查，及时消除安全隐患。</p><p>【湛江市区台风蓝色预警】11日15时，台风“蝴蝶”（热带风暴级）位于湛江市区东南方约540公里的海面上，预计24小时内将受其影响，风力可达6级以上，从6月11日16时起，湛江市区台风蓝色预警信号生效。湛江市气象台发布</p><p>防御指引：</p><p>1.进入台风戒备状态，做好防御台风准备。</p><p>2.注意了解台风最新消息和政府及有关部门防御台风通知。</p><p>3.加固门窗和板房、铁皮屋、棚架等临时搭建物，妥善安置室外搁置物和悬挂物。</p><p>4.海水养殖、海上作业人员应当适时撤离，船舶应当及时回港避风或者采取其他避风措施。</p><p>【工作提醒】请各学校提前做好台风防御工作，排查校园内的广告牌、楼顶设施，特别是支撑柱比较小的车棚雨棚等，该加固的加固，台风期间，人员不得靠近，确保师生人身安全！ 【雷州市教育局政安股&nbsp;2025.6.11】</p></div>
-<p class="time clb">相关通知 2025-06-11 21:31:20 通过 手机 <i class="iconfont icon-view"></i> 浏览(1050) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+</div><p class="time clb">相关通知 2025-06-11 21:31:20 通过 手机 <i class="iconfont icon-view"></i> 浏览(1069) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -965,5 +997,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
+<!-- </body>前插入听读核心JS -->
+<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>
