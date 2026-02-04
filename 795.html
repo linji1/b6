@@ -582,45 +582,10 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
-    <!-- <head>中添加听读功能样式 -->
-<style>
-.sentence {
-  cursor: pointer;
-  /* 默认 inline，不破坏排版 */
-}
-.sentence:hover {
-  background-color: #f0f0f0;
-}
-.sentence.current {
-  background-color: #ffeb3b; /* 黄色高亮 */
-  border-radius: 2px;
-}
-</style>
-<!-- 听读控制面板（插入到printview容器前） -->
-<div class="reader-panel" style="margin: 20px 0;display: none;">
-  <div class="controls">
-    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
-    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
-    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
-    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
-  </div>
-  <div class="voice-control">
-    <label for="voiceSelect">选择语音</label>
-    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
-  </div>
-  <div class="progress-container">
-    <div class="progress-info">
-      进度: <span id="progressText">0/0</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
-  </div>
-</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -639,9 +604,9 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 <center>【通知】</center>
 <p>各小学：根据相关文件要求及教育局、书店的通知，2023年春季课本征订工作现要求如下：</p><p>1、请各校长于今天（12月5日，星期一）下午4时左右带来学校公章及学生人数到管理组一楼党员活动中心征订下学期课本（注意：要认真细致地填写订书表格，书写要工整，不要涂改，需要征订教师课本及教参书、教案、课程标准的要写清楚），不要征订寒假作业；</p><p>2、《雷州市2023年春季推荐目录征订单（义务教育课程标准）》大约10年修订一次，这次征订的《义务教育课程标准》是最新版的，建议各校最好征订1至2本语文、数学、英语等科目的《义务教育课程标准》给教师用。另外还有各年级的非免教材《心理健康》、《体育与健康》《学生文明礼仪》等，各校可自愿征订，由学校付费；</p><p>3、放在办公桌上的课本征订文件和签名表每校各取1份带回存档，不要交。有红色公章的主科课本（8开教学用书征订目录）、副科课本（A4教学用书征订目录）两种订单各取3份（填后签名盖章当场交主科课本、副科课本订单各2份，另1份学校存档下学期开学领课本时带来核对）。另外，教辅材料、课程标准、学生作业本订购合同书三种订单各取2份（填后签名盖章当场交1份，另1份学校存档）；</p><p>4、带来一至六年级学生人数（含科任教师在内）填表征订本学期期末考试卷。</p><p style="text-align: right;">[杨家镇中心小学管理组2022年12月5日上午发送]</p></div>
-</div><p class="time clb">相关通知 2022-12-05 11:51:25 通过 网页 <i class="iconfont icon-view"></i> 浏览(1788) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2022-12-05 11:51:25 通过 网页 <i class="iconfont icon-view"></i> 浏览(1791) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -1002,7 +967,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
-<!-- </body>前插入听读核心JS -->
-<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

@@ -581,45 +581,10 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
-    <!-- <head>中添加听读功能样式 -->
-<style>
-.sentence {
-  cursor: pointer;
-  /* 默认 inline，不破坏排版 */
-}
-.sentence:hover {
-  background-color: #f0f0f0;
-}
-.sentence.current {
-  background-color: #ffeb3b; /* 黄色高亮 */
-  border-radius: 2px;
-}
-</style>
-<!-- 听读控制面板（插入到printview容器前） -->
-<div class="reader-panel" style="margin: 20px 0;display: none;">
-  <div class="controls">
-    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
-    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
-    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
-    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
-  </div>
-  <div class="voice-control">
-    <label for="voiceSelect">选择语音</label>
-    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
-  </div>
-  <div class="progress-container">
-    <div class="progress-info">
-      进度: <span id="progressText">0/0</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
-  </div>
-</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -653,9 +618,9 @@ none：无样式；dotted：点线；dashed：虚线；solid：实线；
 double：双线；groove：槽线；ridge：脊线；inset：内凹；outset：外凸。">
 
 <p>【预警信息】今年第 6 号台风“韦帕”正在以每小时 20-25 公里的速度向西偏北方向移动，强度逐渐增强，预计将于 7 月 19 日凌晨移入南海，逐渐向省中西部一带沿海靠近，并将正面袭击我省。省防总于 7 月 18 日 18 时启动防风Ⅳ级应急响应。根据全省、全市台风防御工作视频会议暨“隐患排查治理年”推进会精神，请各学校做好以下工作:一是密切关注台风和强对流天气发展变化，落实防控责任，及时发布预警，重点做好暑期留校师生安全防护工作，坚决守牢不发生校内师生伤亡的底线。二是全面排查校内地下空间等重点区域风险隐患，视情采取关停管控措施，对校内塔吊、广告牌、玻璃幕墙等高空构筑物和行道树、围墙等易倒伏物抓紧采取加固或拆除措施。严防老旧校舍倒塌，提前果断转移危险区师生。要做好山洪与地质灾害、中小河流洪水和城乡内涝等灾害防范应对，预置抢险救援力量。三是严格落实临灾预警“叫应”和跟踪反馈机制，加强家校联动，及时调度报告突发情况，坚决做到重大事故灾害和重要敏感突发事件“1小时内”报告，全力保障师生生命财产安全和教育系统安全稳定。（市教育局政安股，2025.7.19）</p></div>
-</div><p class="time clb">相关通知 2025-07-19 16:31:14 通过 手机 <i class="iconfont icon-view"></i> 浏览(949) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2025-07-19 16:31:14 通过 手机 <i class="iconfont icon-view"></i> 浏览(951) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -1016,7 +981,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
-<!-- </body>前插入听读核心JS -->
-<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

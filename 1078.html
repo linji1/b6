@@ -581,45 +581,10 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
-    <!-- <head>中添加听读功能样式 -->
-<style>
-.sentence {
-  cursor: pointer;
-  /* 默认 inline，不破坏排版 */
-}
-.sentence:hover {
-  background-color: #f0f0f0;
-}
-.sentence.current {
-  background-color: #ffeb3b; /* 黄色高亮 */
-  border-radius: 2px;
-}
-</style>
-<!-- 听读控制面板（插入到printview容器前） -->
-<div class="reader-panel" style="margin: 20px 0;display: none;">
-  <div class="controls">
-    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
-    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
-    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
-    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
-  </div>
-  <div class="voice-control">
-    <label for="voiceSelect">选择语音</label>
-    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
-  </div>
-  <div class="progress-container">
-    <div class="progress-info">
-      进度: <span id="progressText">0/0</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
-  </div>
-</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -637,9 +602,9 @@ document.body.addEventListener('input', POWERMODE);
 <div  id="printview">
 <h1>✅202501009-2025年春季生均公用经费登记表、名册表和汇总表录入打印、2月考勤</h1><div class="text">
 <p>【通知】各小学、中心幼儿园、普惠性民办幼儿园：为做好2025年春季小学、幼儿园公用经费拨款资料填报工作，现要求如下：一、小学公用经费填报：1、各小学于今天（3月3日）下午参加会议时带来学校公章及各年级人数，到指导组填报《附件4：2025年春秋季义务教育阶段小学学生生均公用经费人数汇总表》纸质版和签订承诺书，签名盖章后当场缴交一式一份，以便及时汇总拨款人数；2、参考学生学籍信息填报电子版《附件5：2025年春季雷州市杨家镇义务教育阶段生均公用经费学生登记表》，按年级和班级从低到高的顺序录入，可以连在一起录入，不要按班级分开，于3月12日前把附件5电子版上传到“群报数”中，同时纸质版签名盖章后交来一式二份。二、幼儿园公用经费填报：1、于今天（3月3日）下午参加会议时带来学校（园）公章到指导组签订幼儿园（幼儿班）拨款人数承诺书（附件8）；2、填报电子版《附件2-1：2025年春秋季雷州市杨家镇公办园（附设班）生均公用经费学生人数汇总表》（普惠性民办幼儿园填报附件2-2）；3、同时填报电子版《附件1：2025年春秋季雷州市杨家镇XX小学（园）在园儿童名册表》，于3月12日前把附件1、附件2电子版上传到“群报数”中，同时纸质版签名盖章后交来一式二份。相关表格已发在微信群上面，请各校（园）按时间节点完成。注意：2025年春秋季小学、幼儿园公用经费表格填报时，各班级登记表、名册表中人数要与汇总表中人数相一致。［杨家镇中心小学教育指导组2025年3月3日上午］</p></div>
-</div><p class="time clb">相关通知 2025-03-03 14:55:25 通过 网页 <i class="iconfont icon-view"></i> 浏览(1923) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2025-03-03 14:55:25 通过 网页 <i class="iconfont icon-view"></i> 浏览(1926) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -1000,7 +965,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
-<!-- </body>前插入听读核心JS -->
-<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>

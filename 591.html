@@ -582,45 +582,10 @@ document.body.addEventListener('input', POWERMODE);
 </style>
 <script src="/assets/js/translate.js"></script>
   <div id="content" style="position: relative;">
-    <!-- <head>中添加听读功能样式 -->
-<style>
-.sentence {
-  cursor: pointer;
-  /* 默认 inline，不破坏排版 */
-}
-.sentence:hover {
-  background-color: #f0f0f0;
-}
-.sentence.current {
-  background-color: #ffeb3b; /* 黄色高亮 */
-  border-radius: 2px;
-}
-</style>
-<!-- 听读控制面板（插入到printview容器前） -->
-<div class="reader-panel" style="margin: 20px 0;display: none;">
-  <div class="controls">
-    <button id="playBtn" class="btn" onclick="handlePlayAction('play')">开始</button>
-    <button id="pauseBtn" class="btn" disabled onclick="handlePlayAction('pause')">暂停</button>
-    <button id="resumeBtn" class="btn" disabled onclick="handlePlayAction('resume')">继续</button>
-    <button id="stopBtn" class="btn" disabled onclick="handlePlayAction('stop')">停止</button>
-  </div>
-  <div class="voice-control">
-    <label for="voiceSelect">选择语音</label>
-    <select id="voiceSelect" class="voice-select" aria-label="选择朗读语音"></select>
-  </div>
-  <div class="progress-container">
-    <div class="progress-info">
-      进度: <span id="progressText">0/0</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
-  </div>
-</div>
   <div class="breadcrumb" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" style="width: 10px;   width: 14px;height: 14px;vertical-align: -2px;
 "><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><a href="/" style="padding-left: 5px;color: #7d8c8e;">首页</a>
 <span>/</span><a href="/b6/list-6.html" style="color: #7d8c8e;">相关通知</a><span>/</span>正文</div>
-<button id="playBtn" class="btn" onclick="handlePlayAction('play')" style="max-width: 50%;opacity: .4;float: right;height: 24px;margin-top: -6px;color: black;background: #f0f0f5;" title="收听本文"><i class="fa fa-headphones" aria-hidden="true"></i> 收听本文</button><span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
+<span id="translate" style="border: 0px;cursor: pointer;float: right;color: #7d8c8e;font-size: 12px;margin-top: -5px;"></span>
 
 <style type="text/css">
 	span#translate select {
@@ -639,9 +604,9 @@ document.body.addEventListener('input', POWERMODE);
 <div class="text">
 【致家长假期安全的一封信】
   据气象台预计，“五一”假期我市各地以多云天气为主，局部有（雷）阵雨，天气较干燥，渐趋炎热，“五一”历来是学生溺水等事故的高发期。希望家长们提高安全意识，配合学校对学生开展防溺水安全教育，不厌其烦地告诫孩子“六不准”，教育孩子自觉远离危险水域，了解熟悉防溺水知识，增强自救自护能力，尤其要教育孩子遇到同伴溺水时避免手拉手盲目施救，要智慧救援，立即寻求成人帮助。家长们还要切实承担起学生脱离学校监管后的看护责任，时刻关注孩子出行去向，尽量避免孩子在气温相对较高的时段外出玩耍。假如孩子是由年纪较大的长辈看管的，可以采取居家监控、手机定位等手段，发动多方力量，协助解决监管问题。有条件的可以带孩子到正规安全的游戏场所进行游泳训练。另外需要注意的是，受疫情影响学生居家学习时间长，孩子的心理健康问题需要我们重视。适逢五一假期，家长可以借此机会，多陪伴孩子，多观察孩子心理变化，多用积极乐观的心态引导孩子，多开展“生命教育”，辅以开展适当的文体活动和亲子活动，建立良好的亲子关系。如果发现孩子有异常表现的，要及时疏导开解，缓解孩子的压力与焦虑情绪，同时将孩子的情况告知班主任和心理教师，通过家校协作、积极干预，帮助孩子恢复心理健康。目前高三、初三已经返学，我市中小学生将于5月11日后分期分批返学。为了学生能尽快适应返学生活，家长可以合理安排孩子的生活起居，为孩子做好后勤保障和情感支持。除此之外，请家长们还要注意孩子的交通、食品卫生、触电等安全问题，让我们共同努力，全力守护学生安全。（湛江市教育局 2020年4月30日）</div>
-</div><p class="time clb">相关通知 2020-04-30 12:39:51 通过 网页 <i class="iconfont icon-view"></i> 浏览(4300) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
+<p class="time clb">相关通知 2020-04-30 12:39:51 通过 网页 <i class="iconfont icon-view"></i> 浏览(4301) <span> <a href="javascript:printme()" target="_self" style="color: #999;"><i class="fa fa-print"></i> 打印</a></span></p>
 <p class="navPost">  
-	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div>  
+	<a href="JavaScript:history.back();">返回</a>&nbsp; <a href="JavaScript:DotRoll('#formpl')">我要评论</a></p></div></div>  
 <!-- 上一篇 下一篇开始 -->
 <div style="overflow: hidden;margin-bottom: 10px;">
 
@@ -1002,7 +967,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- 为代码块加上双击复制功能 -->
-<!-- </body>前插入听读核心JS -->
-<script src="/assets/js/playBtn.js"></script>
 </body>
 </html>
